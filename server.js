@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser');
 const { verifyLogin, currentUser } = require('./middleware/middleware');
 const mongoose = require('mongoose');
 
-var PORT = process.env.PORT || 5000;
+var port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -44,6 +44,6 @@ app.use('/auth', authRoutes);
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log('Server is running');
 });
