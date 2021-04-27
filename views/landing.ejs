@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YelpCamp</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">BLOG APP</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/blogs/new">Creat New Blog</a></li>
+            <%if(!user){%>
+            <li><a href="/auth/login">Login</a></li>				              <li><a href="/auth/register">Sign Up</a></li>
+            <%}
+              else{%>
+            <li><a href="#">Signed in as <%=user.username%></a></li>
+             <li><a href="/auth/logout">Logout</a></li>
+            <%}%>
+            
+           
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row text-center" style="display: flex; flex-wrap: wrap"></div>
+      <% blogs.forEach(function(blog){%>
+        <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          <image src="<%= blog.image %>"> 
+            <div class="caption">
+            <h4>
+                 <%= blog.name%>
+                </h4>
+            </div>
+            <p>
+            <a href="/blogs/<%= blog._id%>" class="btn btn-primary">More info</a>  
+            </p>
+        </div>
+        
+        
+        </div>
+    
+    
+       <%}); %>
+    </div>
+  </body>
+</html>

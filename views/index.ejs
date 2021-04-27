@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+  />
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bgimg {
+      background-image: url('https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d');
+      height: 100%;
+      background:
+        /* top, transparent black, faked with gradient */ linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+        ),
+        /* bottom, image */
+          url(https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d);
+
+      padding: 10px;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      font-weight: 800;
+      font-size: 50px;
+    }
+
+    .btn {
+      margin: 300px auto;
+      display: block;
+      width: 30%;
+      font-weight: 600;
+      background-color: rgb(228, 228, 228);
+      color: black;
+    }
+    .btn:hover {
+      background-color: rgb(224, 224, 224);
+      color: black;
+    }
+    #link-blog {
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <div class="bgimg">
+      <a id="link-block" class="btn btn-primary btn-lg" href="/blogs/landing"
+        >Blogs</a
+      >
+    </div>
+  </body>
+</html>
